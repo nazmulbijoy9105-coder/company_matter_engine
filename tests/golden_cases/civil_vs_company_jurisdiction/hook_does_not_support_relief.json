@@ -1,0 +1,17 @@
+{
+  "note": "s.43 hook invoked but relief claimed is a money recovery: hook cannot support it.",
+  "matter": {
+    "matter_id": "G4",
+    "invoked_hooks": [
+      "HOOK-CA-43"
+    ],
+    "requested_relief": [
+      "REM-900"
+    ],
+    "substance_flags": []
+  },
+  "expect": {
+    "scope": "OUT_OF_SCOPE",
+    "stopped_at_scope": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "note": "Fictional 90-day fixture period; filing on day 120.",
+  "matter": {
+    "matter_id": "G11",
+    "invoked_hooks": [
+      "HOOK-CA-233",
+      "HOOK-CA-195"
+    ],
+    "requested_relief": [
+      "REM-005"
+    ],
+    "substance_flags": []
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "predicate": "applicant.is_member",
+      "object": true,
+      "status": "VERIFIED"
+    },
+    {
+      "id": "F2",
+      "predicate": "applicant.shareholding_percent",
+      "object": 12,
+      "status": "VERIFIED"
+    },
+    {
+      "id": "F90",
+      "predicate": "limitation.accrual_date",
+      "object": "2026-01-01",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "F91",
+      "predicate": "limitation.filing_date",
+      "object": "2026-05-01",
+      "status": "VERIFIED"
+    }
+  ],
+  "rulebook_patch": [
+    {
+      "file": "limitation",
+      "match": {
+        "id": "LIM-CA-233"
+      },
+      "set": {
+        "authoring_status": "DRAFT_UNVERIFIED",
+        "period_days": 90
+      }
+    }
+  ],
+  "expect": {
+    "scope": "IN_SCOPE_CANDIDATE",
+    "maintainability": "NOT_MAINTAINABLE",
+    "issues": {
+      "ISSUE-LIMITATION": "NOT_SATISFIED"
+    }
+  }
+}

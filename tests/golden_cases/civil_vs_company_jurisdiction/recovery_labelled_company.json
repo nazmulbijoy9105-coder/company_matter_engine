@@ -1,0 +1,19 @@
+{
+  "note": "User calls it a company matter; substance is money recovery with no statutory hook.",
+  "matter": {
+    "matter_id": "G1",
+    "invoked_hooks": [],
+    "requested_relief": [
+      "REM-900"
+    ],
+    "substance_flags": [
+      "recovery_of_money",
+      "contract_breach_only"
+    ],
+    "claimed_label": "company matter"
+  },
+  "expect": {
+    "scope": "OUT_OF_SCOPE",
+    "stopped_at_scope": true
+  }
+}

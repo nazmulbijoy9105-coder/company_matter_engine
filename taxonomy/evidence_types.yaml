@@ -1,0 +1,17 @@
+version: "0.1.0"
+verification_status: UNVERIFIED_FROM_BLUEPRINT
+evidence_types:
+  - {id: EV-CORP-001, name: Certificate of incorporation}
+  - {id: EV-CORP-002, name: Memorandum of Association}
+  - {id: EV-CORP-003, name: Articles of Association}
+  - {id: EV-CORP-004, name: Register of members}
+  - {id: EV-CORP-005, name: Share transfer instrument}
+  - {id: EV-CORP-006, name: Board resolution}
+  - {id: EV-CORP-007, name: AGM / EGM minutes}
+  - {id: EV-CORP-008, name: RJSC filing}
+  - {id: EV-CORP-009, name: Share certificate}
+  - {id: EV-CORP-010, name: Notice of meeting}
+  - {id: EV-GEN-001, name: Agreement (shareholders / investment / sale)}
+  - {id: EV-GEN-002, name: Correspondence}
+  - {id: EV-GEN-003, name: Succession / probate document}
+  - {id: EV-GEN-004, name: Financial statement}

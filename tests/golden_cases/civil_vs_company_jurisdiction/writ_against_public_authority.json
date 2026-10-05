@@ -1,0 +1,16 @@
+{
+  "matter": {
+    "matter_id": "G3",
+    "invoked_hooks": [],
+    "requested_relief": [
+      "REM-902"
+    ],
+    "substance_flags": [
+      "writ_against_public_authority"
+    ]
+  },
+  "expect": {
+    "scope": "OUT_OF_SCOPE",
+    "stopped_at_scope": true
+  }
+}

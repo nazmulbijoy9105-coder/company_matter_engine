@@ -1,0 +1,37 @@
+# Element trees per hook. authoring_status: PENDING | DRAFT_UNVERIFIED | VERIFIED.
+# PENDING rule sets evaluate to UNKNOWN ("rule_set_pending_authoring"): the engine
+# refuses to guess a legal test nobody has authored.
+# Element types: FACT_EXISTS (predicate == expected), THRESHOLD_GTE (numeric),
+#                JUDGMENT (evaluative test -> REQUIRES_LAWYER_JUDGMENT, factors listed).
+version: "0.1.0"
+verification_status: UNVERIFIED_FROM_BLUEPRINT
+rule_sets:
+  RS-CA-233:
+    hook: HOOK-CA-233
+    authoring_status: DRAFT_UNVERIFIED
+    description: "Oppression / mismanagement application; s.195 qualification treated as precondition (per blueprint; verify)."
+    elements:
+      - {id: EL-233-001, type: FACT_EXISTS, predicate: applicant.is_member, expected: true, issue: ISSUE-STANDING,
+         label: "Applicant is a member of the company", evidence: [EV-CORP-004]}
+      - {id: EL-233-002, type: THRESHOLD_GTE, predicate: applicant.shareholding_percent, value: 10, issue: ISSUE-PREREQ,
+         value_status: UNVERIFIED, label: "Qualification threshold (s.195)", evidence: [EV-CORP-004, EV-CORP-009]}
+      - {id: EL-233-003, type: JUDGMENT, issue: ISSUE-ACT, label: "Conduct complained of falls within the statutory ground",
+         factors: ["Nature and pattern of the conduct", "Whether it affects the applicant as a member",
+                   "Documentary support for each act alleged", "Alternative remedies available"],
+         evidence: [EV-CORP-006, EV-CORP-007]}
+  RS-CA-43:
+    hook: HOOK-CA-43
+    authoring_status: DRAFT_UNVERIFIED
+    description: "Rectification of register of members."
+    elements:
+      - {id: EL-043-001, type: FACT_EXISTS, predicate: register.entry_contested, expected: true, issue: ISSUE-PREREQ,
+         label: "An entry in the register is contested", evidence: [EV-CORP-004]}
+      - {id: EL-043-002, type: FACT_EXISTS, predicate: applicant.claims_interest_in_shares, expected: true, issue: ISSUE-STANDING,
+         label: "Applicant claims an interest in the shares", evidence: [EV-CORP-005, EV-CORP-009]}
+      - {id: EL-043-003, type: JUDGMENT, issue: ISSUE-SCOPE, label: "Question can be decided in company jurisdiction rather than requiring civil determination of title",
+         factors: ["Whether title is genuinely disputed", "Complexity of evidence", "Related civil proceedings"],
+         evidence: [EV-CORP-005]}
+  RS-CA-59-60:   {hook: HOOK-CA-59-60,     authoring_status: PENDING, elements: []}
+  RS-CA-81-85:   {hook: HOOK-CA-81-85,     authoring_status: PENDING, elements: []}
+  RS-CA-228-229: {hook: HOOK-CA-228-229,   authoring_status: PENDING, elements: []}
+  RS-CA-WINDING-UP: {hook: HOOK-CA-WINDING-UP, authoring_status: PENDING, elements: []}

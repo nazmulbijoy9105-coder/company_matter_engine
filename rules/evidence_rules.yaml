@@ -1,0 +1,8 @@
+# Evidence required per hook, by evidence type id (taxonomy/evidence_types.yaml).
+version: "0.1.0"
+verification_status: UNVERIFIED_FROM_BLUEPRINT
+required_evidence:
+  HOOK-CA-43:  [EV-CORP-004, EV-CORP-005]
+  HOOK-CA-233: [EV-CORP-004, EV-CORP-006, EV-CORP-007]
+  HOOK-CA-195: [EV-CORP-004]
+  HOOK-CA-81-85: [EV-CORP-010, EV-CORP-007]

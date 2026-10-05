@@ -1,0 +1,8 @@
+version: "0.1.0"
+issue_types:
+  - {id: ISSUE-STANDING, question: "Whether the applicant has statutory standing?"}
+  - {id: ISSUE-SCOPE, question: "Whether the dispute falls within Company Bench jurisdiction?"}
+  - {id: ISSUE-PREREQ, question: "Whether the statutory prerequisites have been satisfied?"}
+  - {id: ISSUE-ACT, question: "Whether the impugned corporate act is legally sustainable?"}
+  - {id: ISSUE-RELIEF, question: "Whether the requested relief is available?"}
+  - {id: ISSUE-LIMITATION, question: "Whether the application is within time?"}

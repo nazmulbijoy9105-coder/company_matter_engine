@@ -1,0 +1,21 @@
+{
+  "note": "Hook invoked AND recovery flag: screen must not run on as in-scope.",
+  "matter": {
+    "matter_id": "G2",
+    "invoked_hooks": [
+      "HOOK-CA-233"
+    ],
+    "requested_relief": [
+      "REM-005",
+      "REM-900"
+    ],
+    "substance_flags": [
+      "recovery_of_money"
+    ],
+    "claimed_label": "company matter"
+  },
+  "expect": {
+    "scope": "UNCERTAIN_LAWYER_REVIEW",
+    "stopped_at_scope": false
+  }
+}

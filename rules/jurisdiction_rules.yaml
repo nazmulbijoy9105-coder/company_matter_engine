@@ -1,0 +1,11 @@
+# Forum routing notes for OUT_OF_SCOPE results. Advisory only; a lawyer confirms the forum.
+version: "0.1.0"
+verification_status: UNVERIFIED_FROM_BLUEPRINT
+forum_routes:
+  REM-900: "Civil court (recovery suit). Lawyer to confirm pecuniary/territorial jurisdiction."
+  REM-901: "Civil court (contract). Lawyer to confirm."
+  REM-902: "High Court Division writ jurisdiction, not the Company Bench."
+default_forum: "Undetermined; lawyer to identify forum."
+appeals:
+  supported: false
+  note: "Appeals from Company Bench orders need a separate intake (impugned order, grounds)."

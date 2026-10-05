@@ -1,0 +1,20 @@
+{
+  "note": "Winding-up element tree not authored: engine refuses to guess.",
+  "matter": {
+    "matter_id": "G14",
+    "invoked_hooks": [
+      "HOOK-CA-WINDING-UP"
+    ],
+    "requested_relief": [
+      "REM-004"
+    ],
+    "substance_flags": []
+  },
+  "expect": {
+    "scope": "IN_SCOPE_CANDIDATE",
+    "maintainability": "UNKNOWN",
+    "relief": {
+      "REM-004": "NOT_ESTABLISHED"
+    }
+  }
+}

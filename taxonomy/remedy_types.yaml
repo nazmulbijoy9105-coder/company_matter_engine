@@ -1,0 +1,15 @@
+# company_bench_remedy=false marks relief that signals a non-Company-Bench forum.
+version: "0.1.0"
+verification_status: UNVERIFIED_FROM_BLUEPRINT
+remedies:
+  - {id: REM-001, name: Rectification of register, company_bench_remedy: true}
+  - {id: REM-002, name: Declaration, company_bench_remedy: true}
+  - {id: REM-003, name: Injunction, company_bench_remedy: true}
+  - {id: REM-004, name: Winding-up, company_bench_remedy: true}
+  - {id: REM-005, name: Oppression / mismanagement relief, company_bench_remedy: true}
+  - {id: REM-006, name: Capital reduction confirmation, company_bench_remedy: true}
+  - {id: REM-007, name: Direction to convene or regulate a meeting, company_bench_remedy: true}
+  - {id: REM-008, name: Sanction of reconstruction / amalgamation / arrangement, company_bench_remedy: true}
+  - {id: REM-900, name: Recovery of money, company_bench_remedy: false, likely_forum: Civil court}
+  - {id: REM-901, name: Damages / specific performance of contract, company_bench_remedy: false, likely_forum: Civil court}
+  - {id: REM-902, name: Writ relief against public authority, company_bench_remedy: false, likely_forum: HCD writ jurisdiction}

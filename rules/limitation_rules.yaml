@@ -1,0 +1,10 @@
+# No automatic date fallback (D7). period_days: null => PENDING => UNKNOWN.
+# Periods must be taken from the Limitation Act 1908 text by a lawyer; none are asserted here.
+version: "0.1.0"
+verification_status: UNVERIFIED_FROM_BLUEPRINT
+rules:
+  - {id: LIM-CA-43,      hook: HOOK-CA-43,      authoring_status: PENDING, period_days: null}
+  - {id: LIM-CA-233,     hook: HOOK-CA-233,     authoring_status: PENDING, period_days: null}
+  - {id: LIM-CA-59-60,   hook: HOOK-CA-59-60,   authoring_status: PENDING, period_days: null}
+  - {id: LIM-CA-81-85,   hook: HOOK-CA-81-85,   authoring_status: PENDING, period_days: null}
+  - {id: LIM-CA-228-229, hook: HOOK-CA-228-229, authoring_status: PENDING, period_days: null}

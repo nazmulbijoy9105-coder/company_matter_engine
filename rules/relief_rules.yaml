@@ -1,0 +1,15 @@
+# A remedy is only as available as the rule sets it depends on.
+# AVAILABLE iff all required rule sets SATISFIED; NOT_AVAILABLE if any NOT_SATISFIED;
+# CONDITIONALLY_AVAILABLE if no failure but some UNKNOWN/DISPUTED/REQUIRES_LAWYER_JUDGMENT;
+# NOT_ESTABLISHED if no required rule set was evaluated.
+version: "0.1.0"
+verification_status: UNVERIFIED_FROM_BLUEPRINT
+remedies:
+  REM-001: {requires: [RS-CA-43]}
+  REM-002: {requires: [RS-CA-43]}
+  REM-005: {requires: [RS-CA-233]}
+  REM-003: {requires: []}          # interim/final injunction: depends on main relief; lawyer-authored
+  REM-004: {requires: [RS-CA-WINDING-UP]}
+  REM-006: {requires: [RS-CA-59-60]}
+  REM-007: {requires: [RS-CA-81-85]}
+  REM-008: {requires: [RS-CA-228-229]}

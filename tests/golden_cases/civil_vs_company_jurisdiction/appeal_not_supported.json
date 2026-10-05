@@ -1,0 +1,17 @@
+{
+  "matter": {
+    "matter_id": "G5",
+    "invoked_hooks": [
+      "HOOK-CA-233"
+    ],
+    "requested_relief": [
+      "REM-005"
+    ],
+    "substance_flags": [],
+    "intake_kind": "APPEAL"
+  },
+  "expect": {
+    "scope": "OUT_OF_SCOPE",
+    "stopped_at_scope": true
+  }
+}

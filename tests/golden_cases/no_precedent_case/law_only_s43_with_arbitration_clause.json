@@ -1,0 +1,63 @@
+{
+  "note": "Law-only run. Arbitration clause is flagged for lawyer review, never auto-routed.",
+  "matter": {
+    "matter_id": "G13",
+    "invoked_hooks": [
+      "HOOK-CA-43"
+    ],
+    "requested_relief": [
+      "REM-001"
+    ],
+    "substance_flags": [
+      "arbitration_clause_present"
+    ]
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "predicate": "register.entry_contested",
+      "object": true,
+      "status": "VERIFIED"
+    },
+    {
+      "id": "F2",
+      "predicate": "applicant.claims_interest_in_shares",
+      "object": true,
+      "status": "VERIFIED"
+    },
+    {
+      "id": "F90",
+      "predicate": "limitation.accrual_date",
+      "object": "2026-01-01",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "F91",
+      "predicate": "limitation.filing_date",
+      "object": "2026-02-01",
+      "status": "VERIFIED"
+    }
+  ],
+  "rulebook_patch": [
+    {
+      "file": "limitation",
+      "match": {
+        "id": "LIM-CA-43"
+      },
+      "set": {
+        "authoring_status": "DRAFT_UNVERIFIED",
+        "period_days": 90
+      }
+    }
+  ],
+  "expect": {
+    "scope": "IN_SCOPE_CANDIDATE",
+    "maintainability": "LAWYER_JUDGMENT_REQUIRED",
+    "relief": {
+      "REM-001": "CONDITIONALLY_AVAILABLE"
+    },
+    "issues": {
+      "ISSUE-SCOPE": "REQUIRES_LAWYER_JUDGMENT"
+    }
+  }
+}

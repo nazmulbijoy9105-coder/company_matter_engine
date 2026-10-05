@@ -1,0 +1,20 @@
+# Asymmetric scope gate. Entry requires a POSITIVE statutory hook whose remedy matches
+# the relief claimed. The user's "company matter" label is never evidence.
+# All section numbers below come from the project blueprint, NOT the statute text.
+version: "0.1.0"
+verification_status: UNVERIFIED_FROM_BLUEPRINT
+supported_intake_kinds: [ORIGINAL]   # APPEAL is an extension point (docs/DECISIONS.md D1)
+hooks:
+  - {id: HOOK-CA-43,        act: companies_act_1994, section: "43",      remedies: [REM-001, REM-002], section_status: UNVERIFIED}
+  - {id: HOOK-CA-59-60,     act: companies_act_1994, section: "59-60",   remedies: [REM-006],          section_status: UNVERIFIED}
+  - {id: HOOK-CA-81-85,     act: companies_act_1994, section: "81,85",   remedies: [REM-007, REM-003], section_status: UNVERIFIED}
+  - {id: HOOK-CA-195,       act: companies_act_1994, section: "195",     remedies: [REM-005],          section_status: UNVERIFIED, covered_by: RS-CA-233}
+  - {id: HOOK-CA-233,       act: companies_act_1994, section: "233",     remedies: [REM-005, REM-003], section_status: UNVERIFIED}
+  - {id: HOOK-CA-228-229,   act: companies_act_1994, section: "228-229", remedies: [REM-008],          section_status: UNVERIFIED}
+  - {id: HOOK-CA-WINDING-UP, act: companies_act_1994, section: null,     remedies: [REM-004],          section_status: PENDING_SECTION_MAPPING}
+# Substance flags set by a human intake reviewer (never inferred silently by the engine).
+substance_flags:
+  recovery_of_money:           {routes_to: REM-900, hook_conflict: true}
+  contract_breach_only:        {routes_to: REM-901, hook_conflict: true}
+  writ_against_public_authority: {routes_to: REM-902, hook_conflict: true}
+  arbitration_clause_present:  {hook_conflict: false, note: "ARBITRATION_CLAUSE_PRESENT: effect on statutory jurisdiction requires lawyer review; engine does not route to arbitration"}

@@ -1,0 +1,22 @@
+# Corpus loading policy: load ONLY what a statutory trigger requires.
+version: "0.1.0"
+domains:
+  core:
+    - {id: companies_act_1994, load: always}
+  supporting:
+    - {id: cpc_1908, load: on_trigger, triggers: [interim_relief, civil_boundary_risk, procedure]}
+    - {id: evidence_act_1872, load: on_trigger, triggers: [documentary_evidence, admissibility]}
+    - {id: limitation_act_1908, load: on_trigger, triggers: [any_filing]}
+    - {id: contract_act_1872, load: on_trigger, triggers: [shareholder_agreement, investment_agreement]}
+    - {id: specific_relief_act_1877, load: on_trigger, triggers: [declaration, injunction]}
+    - {id: succession_act_1925, load: on_trigger, triggers: [share_transmission, deceased_member]}
+    - {id: transfer_property_act_1882, load: on_trigger, triggers: [immovable_property, mortgage]}
+    - {id: arbitration_act_2001, load: on_trigger, triggers: [arbitration_clause]}
+  conditional_regulatory:
+    - {id: bank_companies_act_1991, triggers: [bank_company]}
+    - {id: securities_exchange_ordinance_1969, triggers: [listed_company]}
+    - {id: income_tax_act_2023, triggers: [tax_issue]}
+    - {id: labour_act_2006, triggers: [employment_issue]}
+    - {id: negotiable_instruments_act_1881, triggers: [cheque_or_instrument]}
+    - {id: stamp_act_1899, triggers: [stamp_duty_issue]}
+    - {id: registration_act_1908, triggers: [registration_issue]}

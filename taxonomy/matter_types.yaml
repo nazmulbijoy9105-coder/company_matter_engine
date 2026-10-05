@@ -1,0 +1,46 @@
+# Canonical Company Bench matter taxonomy. DATA, not branching code.
+# A matter may carry several labels (multi-label); the classifier picks a primary.
+# `hooks` link a matter type to scope-gate hooks defined in rules/scope_gate_rules.yaml.
+version: "0.1.0"
+verification_status: UNVERIFIED_FROM_BLUEPRINT
+matter_types:
+  - {id: CM-001, name: Incorporation / corporate constitution, hooks: []}
+  - {id: CM-002, name: Memorandum / Articles, hooks: []}
+  - {id: CM-003, name: Membership, hooks: [HOOK-CA-43]}
+  - {id: CM-004, name: Register of members, hooks: [HOOK-CA-43]}
+  - {id: CM-005, name: Share transfer, hooks: [HOOK-CA-43]}
+  - {id: CM-006, name: Share transmission, hooks: [HOOK-CA-43], supporting_law: [succession]}
+  - {id: CM-007, name: Rectification, hooks: [HOOK-CA-43]}
+  - {id: CM-008, name: Share ownership / title, hooks: [HOOK-CA-43], civil_boundary_risk: true}
+  - {id: CM-009, name: Share capital, hooks: []}
+  - {id: CM-010, name: Reduction of capital, hooks: [HOOK-CA-59-60]}
+  - {id: CM-011, name: Variation of class rights, hooks: []}
+  - {id: CM-012, name: Allotment / issue, hooks: []}
+  - {id: CM-013, name: AGM, hooks: [HOOK-CA-81-85]}
+  - {id: CM-014, name: EGM, hooks: [HOOK-CA-81-85]}
+  - {id: CM-015, name: Meeting validity, hooks: [HOOK-CA-81-85]}
+  - {id: CM-016, name: Board resolution, hooks: []}
+  - {id: CM-017, name: Director appointment, hooks: []}
+  - {id: CM-018, name: Director removal, hooks: []}
+  - {id: CM-019, name: Director qualification / disqualification, hooks: []}
+  - {id: CM-020, name: Corporate authority, hooks: []}
+  - {id: CM-021, name: Oppression, hooks: [HOOK-CA-233, HOOK-CA-195]}
+  - {id: CM-022, name: Mismanagement, hooks: [HOOK-CA-233, HOOK-CA-195]}
+  - {id: CM-023, name: Minority protection, hooks: [HOOK-CA-233, HOOK-CA-195]}
+  - {id: CM-024, name: Reconstruction, hooks: [HOOK-CA-228-229]}
+  - {id: CM-025, name: Amalgamation, hooks: [HOOK-CA-228-229]}
+  - {id: CM-026, name: Arrangement, hooks: [HOOK-CA-228-229]}
+  - {id: CM-027, name: Winding-up, hooks: [HOOK-CA-WINDING-UP]}
+  - {id: CM-028, name: Liquidation, hooks: [HOOK-CA-WINDING-UP]}
+  - {id: CM-029, name: Company debt / creditor petition, hooks: [HOOK-CA-WINDING-UP], civil_boundary_risk: true}
+  - {id: CM-030, name: Debenture, hooks: []}
+  - {id: CM-031, name: Charge, hooks: []}
+  - {id: CM-032, name: Foreign company, hooks: []}
+  - {id: CM-033, name: Public / listed company, hooks: [], conditional_law: [securities]}
+  - {id: CM-034, name: RJSC compliance dispute, hooks: []}
+  - {id: CM-035, name: Registrar-related corporate dispute, hooks: [], civil_boundary_risk: true}
+  - {id: CM-036, name: Corporate record dispute, hooks: []}
+  - {id: CM-037, name: Corporate fraud-related dispute, hooks: [], civil_boundary_risk: true}
+  - {id: CM-038, name: Corporate asset dispute, hooks: [], civil_boundary_risk: true}
+  - {id: CM-039, name: Corporate contract dispute, hooks: [], civil_boundary_risk: true}
+  - {id: CM-040, name: Other statutory Company Matter, hooks: []}

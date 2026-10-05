@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.env
+*.db
+node_modules/
+.next/
+# Never commit client matter data or ingested judgment text
+matters_data/
+precedents/raw/
+corpus/raw/
