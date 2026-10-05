@@ -36,3 +36,4 @@ uvicorn app.main:app --reload           # API (in-memory stores)
 3. Author limitation periods in `rules/limitation_rules.yaml` from the Limitation Act text.
 4. Author the PENDING rule sets (capital reduction, AGM, reconstruction, winding-up).
 5. Ingest and verify precedents one by one; the 2026 judgments cited in the blueprint are NOT in the registry.
+# company_matter_engine
