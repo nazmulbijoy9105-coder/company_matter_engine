@@ -1,12 +1,72 @@
+# Python
 __pycache__/
-*.pyc
-.pytest_cache/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
 .venv/
+venv/
+env/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Environment / secrets
 .env
-*.db
-node_modules/
-.next/
-# Never commit client matter data or ingested judgment text
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+frontend/node_modules/
+frontend/.next/
+frontend/dist/
+frontend/.vercel/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+logs/
+
+# Local databases
+*.sqlite
+*.sqlite3
+
+# Temporary/local data
+tmp/
+temp/
+.cache/
+uploads/
+generated/
+artifacts/
+
+# Credentials / private keys
+credentials.json
+service-account*.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Private legal/matter data — never commit
 matters_data/
 precedents/raw/
 corpus/raw/
