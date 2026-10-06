@@ -2,7 +2,7 @@
 import hashlib
 from pathlib import Path
 
-ENGINE_VERSION = "0.1.0"
+from app.core.config import ENGINE_VERSION
 ROOT = Path(__file__).resolve().parents[2]
 
 
